@@ -34,6 +34,16 @@ import 'package:render_metrics/src/data/coords_metrics.dart';
 /// [centerLeft] - center left coordinate.
 /// [centerRight] - center right coordinate.
 class RenderData {
+  const RenderData({
+    required this.yTop,
+    required this.yBottom,
+    required this.yCenter,
+    required this.xLeft,
+    required this.xRight,
+    required this.xCenter,
+    required this.width,
+    required this.height,
+  });
   final double yTop;
   final double yBottom;
   final double yCenter;
@@ -63,17 +73,6 @@ class RenderData {
 
   CoordinatesMetrics get centerRight =>
       CoordinatesMetrics(y: yCenter, x: xRight);
-
-  const RenderData({
-    required this.yTop,
-    required this.yBottom,
-    required this.yCenter,
-    required this.xLeft,
-    required this.xRight,
-    required this.xCenter,
-    required this.width,
-    required this.height,
-  });
 
   @override
   String toString() {

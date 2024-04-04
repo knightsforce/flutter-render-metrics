@@ -150,8 +150,8 @@ void main() {
           RenderMetricsObject(
             id: firstId,
             manager: renderManager,
-            child: box,
             onUpdate: onUpdate,
+            child: box,
           ).updateRenderObject(context, renderObject);
 
           verify(() => onUpdate(any<String>(), any())).called(1);

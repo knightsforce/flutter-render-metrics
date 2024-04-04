@@ -14,11 +14,10 @@
 
 /// Defines a point representing a location in (x,y) coordinate space.
 class CoordinatesMetrics {
-  final double x;
-  final double y;
-
   const CoordinatesMetrics({
     required this.x,
     required this.y,
   });
+  final double x;
+  final double y;
 }

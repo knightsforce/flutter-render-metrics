@@ -43,6 +43,20 @@ import 'package:render_metrics/src/data/coords_metrics.dart';
 /// [centerLeft] - center left coordinate.
 /// [centerRight] - center right coordinate.
 class ComparisonDiff {
+  const ComparisonDiff({
+    required this.yTop,
+    required this.yBottom,
+    required this.yCenter,
+    required this.xLeft,
+    required this.xRight,
+    required this.xCenter,
+    required this.diffTopToBottom,
+    required this.diffBottomToTop,
+    required this.diffLeftToRight,
+    required this.diffRightToLeft,
+    required this.width,
+    required this.height,
+  });
   final double yTop;
   final double yBottom;
   final double yCenter;
@@ -76,21 +90,6 @@ class ComparisonDiff {
 
   CoordinatesMetrics get centerRight =>
       CoordinatesMetrics(y: yCenter, x: xRight);
-
-  const ComparisonDiff({
-    required this.yTop,
-    required this.yBottom,
-    required this.yCenter,
-    required this.xLeft,
-    required this.xRight,
-    required this.xCenter,
-    required this.diffTopToBottom,
-    required this.diffBottomToTop,
-    required this.diffLeftToRight,
-    required this.diffRightToLeft,
-    required this.width,
-    required this.height,
-  });
 
   @override
   String toString() {
