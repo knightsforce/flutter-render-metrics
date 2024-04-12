@@ -1,5 +1,12 @@
 # Render Metrics
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/surfstudio/flutter-open-source/blob/887525c23f4d57a2d96fc2e6a31e15d1e29d1787/assets/logo_white.png">
+  <img alt="Shows an illustrated sun in light color mode and a moon with stars in dark color mode." src="https://github.com/surfstudio/flutter-open-source/blob/887525c23f4d57a2d96fc2e6a31e15d1e29d1787/assets/logo_black.png" width ="200">
+</picture>
+
+Made by [Surf 🏄‍♂️🏄‍♂️🏄‍♂️](https://surf.dev/)
+
 [![Build Status](https://shields.io/github/actions/workflow/status/surfstudio/flutter-render-metrics/main.yml?logo=github&logoColor=white)](https://github.com/surfstudio/flutter-render-metrics)
 [![Coverage Status](https://img.shields.io/codecov/c/github/surfstudio/flutter-render-metrics?=render_metrics&logo=codecov&logoColor=white)](https://app.codecov.io/gh/surfstudio/flutter-render-metrics)
 [![Pub Version](https://img.shields.io/pub/v/render_metrics?logo=dart&logoColor=white)](https://pub.dev/packages/render_metrics)
@@ -7,11 +14,7 @@
 [![Pub popularity](https://badgen.net/pub/popularity/render_metrics)](https://pub.dev/packages/render_metrics/score)
 ![Flutter Platform](https://badgen.net/pub/flutter-platform/render_metrics)
 
-This package is part of the [SurfGear](https://github.com/surfstudio/SurfGear) toolkit made by [Surf](https://surf.ru/).
-
-[![SurfGear](https://i.ibb.co/gJc4zCG/render-metrics.png)](https://github.com/surfstudio/flutter-render-metrics)
-
-## Description
+## Overview
 
 This package helps retrieve the current positioning coordinates of any widget in a widgets tree in your Flutter application.
 
