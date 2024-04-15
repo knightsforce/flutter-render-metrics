@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.3
+
+* Rebranding.
+
 ## 2.0.2
 
 * Internal improvements.
