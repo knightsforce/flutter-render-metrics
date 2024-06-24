@@ -28,13 +28,21 @@ class RenderParametersManager<T> extends RenderManager<T> {
   /// Add an instance of [RenderObject] by [id].
   @override
   void addRenderObject(T id, RenderObject renderObject) {
-    renderObjects[id] = renderObject as RenderMetricsBox;
+    if (renderObject is! RenderMetricsBox) {
+      return;
+    }
+
+    renderObjects[id] = renderObject;
   }
 
   /// Update an instance of [RenderObject] by [id].
   @override
   void updateRenderObject(T id, RenderObject renderObject) {
-    renderObjects[id] = renderObject as RenderMetricsBox;
+    if (renderObject is! RenderMetricsBox) {
+      return;
+    }
+
+    renderObjects[id] = renderObject;
   }
 
   /// Delete an instance of [RenderObject] by [id].

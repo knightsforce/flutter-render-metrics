@@ -49,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   final String _text0Id = 'text0Id';
   final String _text1Id = 'text1Id';
+  final String _text2Id = 'text2Id';
   final String _containerPositionedId = 'containerPositionedId';
   final String _textBlockId = 'textBlockId';
 
@@ -57,6 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _isOpacity = false;
 
   String _text0 = '';
+  String _text2 = 'No metrics';
 
   @override
   void initState() {
@@ -119,6 +121,15 @@ class _MyHomePageState extends State<MyHomePage> {
                         text: 'Metrics:\n\n$_text0',
                       ),
                     ),
+                    const SizedBox(height: 20),
+                    RenderMetricsObject(
+                      id: _text2Id,
+                      onMount: _onUpdate,
+                      onUpdate: _onUpdate,
+                      child: _TextContainer(
+                        text: 'Metrics without manager:\n\n$_text2',
+                      ),
+                    ),
                     const SizedBox(height: 1500),
                   ],
                 ),
@@ -158,6 +169,14 @@ class _MyHomePageState extends State<MyHomePage> {
     if (_isOpacity == isChange) return;
     setState(() {
       _isOpacity = isChange;
+    });
+  }
+
+  void _onUpdate(Object? id, RenderMetricsBox box) {
+    Future.delayed(const Duration(seconds: 1)).then((value) {
+      setState(() {
+        _text2 = box.data.toString();
+      });
     });
   }
 }
